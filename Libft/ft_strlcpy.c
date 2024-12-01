@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 18:40:32 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/26 18:40:38 by stabares         ###   ########.fr       */
+/*   Created: 2024/11/27 18:08:01 by stabares          #+#    #+#             */
+/*   Updated: 2024/11/27 18:08:03 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-int	ft_isdigit(int c)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	size_t	src_len;
+	size_t	i;
+
+	src_len = 0;
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
+	if (n > 0)
+	{
+		i = 0;
+		while (i < n - 1 && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (src_len);
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-	int	c;
-
-	c = '2';
-	printf("%c Es un digito y retorna %d\n", c, ft_isdigit(c));
-	c = 'A';
-	printf("%c No es un digito y retorna %d\n", c, ft_isdigit(c));
-	return (0);
-} */

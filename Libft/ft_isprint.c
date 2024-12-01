@@ -15,3 +15,16 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int	main(void)
+{
+	int	c;
+
+	c = '$';
+	printf("%c Es imprimible y retorna %d\n", c, ft_isprint(c));
+	c = 190;
+	printf("%c No es imprimible y retorna %d\n", c, ft_isprint(c));
+	return (0);
+} */

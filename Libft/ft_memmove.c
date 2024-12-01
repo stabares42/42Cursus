@@ -9,6 +9,7 @@
 /*   Updated: 2024/11/27 17:04:32 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
 void	ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -29,5 +30,5 @@ void	ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 			d[n] = s[n];
 	}
-	return (dest)
+	return (dest);
 }

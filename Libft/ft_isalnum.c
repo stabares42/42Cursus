@@ -16,3 +16,19 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int	main(void)
+{
+	int	c;
+
+	c = '2';
+	printf("%c Es alfanumerico y retorna %d\n", c, ft_isalnum(c));
+	c = 'S';
+	printf("%c Es alfanumerico y retorna %d\n", c, ft_isalnum(c));
+	c = '@';
+	printf("%c No es alfanumerico y retorna %d\n", c, ft_isalnum(c));
+	return (0);
+}
+ */

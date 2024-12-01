@@ -9,11 +9,13 @@
 /*   Updated: 2024/11/27 16:10:26 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void *ft_memcpy(void *dest, const void *src, size_t n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	size_t	i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
@@ -25,3 +27,30 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/* #include <stdio.h>
+
+int	main(void)
+{
+	char	buffer_dest[20];
+	char	buffer_src[] = "Cadena de prueba";
+	int		i;
+
+	i = 0;
+	while (i < 20)
+	{
+		buffer_dest[i] = 0;
+		i++;
+	}
+	printf("Antes de memcpy:\n");
+	printf("Origen: \"%s\"\n", buffer_src);
+	printf("Destino: \"%s\"\n", buffer_dest);
+
+	ft_memcpy(buffer_dest, buffer_src, 13);
+
+	printf("Después de memcpy:\n");
+	printf("Origen: \"%s\"\n", buffer_src);
+	printf("Destino: \"%s\"\n", buffer_dest);
+	return (0);
+}
+ */

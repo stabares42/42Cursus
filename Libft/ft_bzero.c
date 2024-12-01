@@ -9,6 +9,8 @@
 /*   Updated: 2024/11/27 15:25:43 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
+
 void	ft_bzero(void *b, size_t n)
 {
 	size_t	i;
@@ -20,3 +22,18 @@ void	ft_bzero(void *b, size_t n)
 		i++;
 	}
 }
+
+/* #include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char	buffer[27];
+
+	strcpy(buffer, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	printf("Antes de bzero: \"%s\"\n", buffer);
+	ft_bzero(buffer, 10);
+	printf("Despues de bzero: \"%s\"\n", &buffer[10]);
+	return (0);
+}
+ */

@@ -15,3 +15,17 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+
+/* #include <stdio.h>
+
+int	main(void)
+{
+	int	c;
+
+	c = 's';
+	printf("%c Es ASCII estardar y retorna %d\n", c, ft_isascii(c));
+	c = 169;
+	printf("%c No es un ASCII estandar y retorna %d\n", c, ft_isascii(c));
+	return (0);
+}
+ */
