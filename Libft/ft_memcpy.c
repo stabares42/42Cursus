@@ -9,7 +9,7 @@
 /*   Updated: 2024/11/27 16:10:26 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -28,8 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* #include <stdio.h>
-
+/* 
 int	main(void)
 {
 	char	buffer_dest[20];

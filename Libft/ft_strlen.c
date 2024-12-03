@@ -9,7 +9,7 @@
 /*   Updated: 2024/11/26 20:16:36 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
@@ -21,8 +21,7 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-/* #include <stdio.h>
-#include <string.h>
+/*
 
 int	main(void)
 {
@@ -31,10 +30,10 @@ int	main(void)
 	char	str3[17];
 	char	str4[11];
 
-	strcpy(str1, "Hola, 42!");
-	strcpy(str2, "");
-	strcpy(str3, "Prueba ft_srtlen");
-	strcpy(str4, "1234567890");
+	ft_strcpy(str1, "Hola, 42!");
+	ft_strcpy(str2, "");
+	ft_strcpy(str3, "Prueba ft_srtlen");
+	ft_strcpy(str4, "1234567890");
 
 	printf("La longitud de \"%s\" es %zu\n", str1, ft_strlen(str1));
 	printf("La longitud de \"%s\" es %zu\n", str2, ft_strlen(str2));

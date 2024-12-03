@@ -9,6 +9,8 @@
 /*   Updated: 2024/11/26 20:09:39 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 127)
@@ -16,8 +18,7 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-/* #include <stdio.h>
-
+/*
 int	main(void)
 {
 	int	c;

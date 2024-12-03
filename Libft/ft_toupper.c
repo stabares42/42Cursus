@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 17:55:12 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/26 17:55:15 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/02 17:42:10 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/02 17:42:12 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
 
 /*
 int	main(void)
 {
-	int	c;
+	char	c1;
 
-	c = 'A';
-	printf("%c Es alfabetico y retorna %d\n", c, ft_isalpha(c));
-
-	c = '1';
-	printf("%c No es alfabetico y retorna %d\n", c, ft_isalpha(c));
+	c1 = 'a';
+	printf("Original: \"%c\"\nUppercase: \"%c\"\n", c1, ft_toupper(c1));
 	return (0);
-} */
+}
+*/

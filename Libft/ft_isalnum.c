@@ -9,6 +9,8 @@
 /*   Updated: 2024/11/26 19:38:38 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
 int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
@@ -17,8 +19,7 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-/* #include <stdio.h>
-
+/*
 int	main(void)
 {
 	int	c;
