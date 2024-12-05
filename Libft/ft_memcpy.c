@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:10:23 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/27 16:10:26 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:54:45 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
@@ -28,8 +29,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-/* 
-int	main(void)
+/* int	main(void)
 {
 	char	buffer_dest[20];
 	char	buffer_src[] = "Cadena de prueba";
@@ -41,7 +41,7 @@ int	main(void)
 		buffer_dest[i] = 0;
 		i++;
 	}
-	printf("Antes de memcpy:\n");
+	printf("Antes de memcpy.\n");
 	printf("Origen: \"%s\"\n", buffer_src);
 	printf("Destino: \"%s\"\n", buffer_dest);
 
@@ -51,5 +51,4 @@ int	main(void)
 	printf("Origen: \"%s\"\n", buffer_src);
 	printf("Destino: \"%s\"\n", buffer_dest);
 	return (0);
-}
- */
+} */

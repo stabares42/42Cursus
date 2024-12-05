@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:34:42 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/03 17:34:46 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:54:55 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, char c)
 {
-	size_f	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -29,12 +30,12 @@ char	*ft_strrchr(const char *str, char c)
 	return (NULL);
 }
 
-int	main(void)
+/* int	main(void)
 {
-	const char	*str1;
-	char		*result;
-	
-	ft_strlcpy(str1, "Hola, mundo");
+	char	str1[50];
+	char	*result;
+
+	strcpy(str1, "Hola, mundo");
 	result = ft_strrchr(str1, 'n');
 	if (result != NULL)
 	{
@@ -43,7 +44,7 @@ int	main(void)
 	}
 	else
 	{
-		printf("No se encontró el caracter 'z'.\n")
+		printf("No se encontró el caracter 'z'.\n");
 	}
 	return (0);
-}
+} */

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:47:11 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/26 19:47:13 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 12:44:18 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_isascii(int c)
@@ -18,8 +19,7 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-/*
-int	main(void)
+/* int	main(void)
 {
 	int	c;
 
@@ -28,5 +28,4 @@ int	main(void)
 	c = 169;
 	printf("%c No es un ASCII estandar y retorna %d\n", c, ft_isascii(c));
 	return (0);
-}
- */
+} */

@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 13:00:24 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/02 13:00:25 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:35:41 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -34,8 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dst_len + src_len);
 }
 
-/* 
-int	main(void)
+/* int	main(void)
 {
 	char	dst[15];
 	char	src[15];
@@ -43,11 +43,10 @@ int	main(void)
 	size_t	result;
 
 	buffer_size = 20;
-	ft_strcpy(dst, "Hola ");
-	ft_strcpy(src, "mundo");
-	result = ft_strlcat(dst, src, sizeof(dst));
+	strcpy(dst, "Hola ");
+	strcpy(src, "mundo");
+	result = ft_strlcat(dst, src, buffer_size);
 	printf("Cadena concatenada: \"%s\"\n", dst);
 	printf("Longitud de cadena concatenada: \"%ld\"\n", result);
 	return (0);
-} 
-*/
+} */

@@ -1,37 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 15:25:41 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 13:42:36 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/04 14:27:58 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/05 12:47:24 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *b, size_t n)
+void	*ft_memchr(const void *str, int ch, size_t n)
 {
-	size_t	i;
+	unsigned char	*s;
+	unsigned char	c;
+	size_t			i;
 
 	i = 0;
+	s = (unsigned char *)str;
+	c = (unsigned char )ch;
 	while (i < n)
 	{
-		((char *)b)[i] = 0;
+		if (s[i] == c)
+		{
+			return ((void *)(s + i));
+		}
 		i++;
 	}
+	return (NULL);
 }
 
 /* int	main(void)
 {
-	char	buffer[27];
+	char	str[20];
+	char	ch;
+	void	*result;
 
-	strcpy(buffer, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-	printf("Antes de bzero: \"%s\"\n", buffer);
-	ft_bzero(buffer, 10);
-	printf("Despues de bzero: \"%s\"\n", &buffer[10]);
+	strcpy(str, "Hola mundo");
+	ch = 'm';
+	result = ft_memchr(str, ch, 10);
+	if (result)
+		printf("Esta el caracter \"%c\" en la direccion: %p\n", ch, result);
+	else
+		printf("No se encontro el caracter \"%c\"\n", ch);
 	return (0);
-}
- */
+} */

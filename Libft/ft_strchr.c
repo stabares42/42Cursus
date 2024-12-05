@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:29:13 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/03 15:29:15 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:59:10 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
@@ -31,8 +32,11 @@ char	*ft_strchr(const char *str, int c)
 {
 	char	str[50];
 	char	*result;
+	size_t	buffer_size;
 
-	ft_strlcpy(str, "Hola, mundo!", sizeof(str));
+	buffer_size = 20;
+	strncpy(str, "Hola, mundo!", buffer_size);
+	str [buffer_size - 1] = '\0';
 	result = ft_strchr(str, 'm');
 	if (result)
 	{
@@ -41,5 +45,5 @@ char	*ft_strchr(const char *str, int c)
 	}
 	else
 		printf("No se encontro 'm'.\n");
-
+	return (0);
 } */

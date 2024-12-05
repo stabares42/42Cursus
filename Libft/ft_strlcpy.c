@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 18:08:01 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/27 18:08:03 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:39:28 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
@@ -34,8 +35,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	return (src_len);
 }
 
-/*
-int	main(void)
+/* int	main(void)
 {
 	char	dest[20];
 	char	src[20];
@@ -50,19 +50,17 @@ int	main(void)
 		i++;
 	}
 	strcpy(src, "Cadena de prueba");
-	
 	n = 20;
 	result = ft_strlcpy(dest, src, n);
 	printf("Origen: \"%s\"\n", src);
 	printf("Destino: \"%s\"\n", dest);
-	printf("Longitud de origen: \"%ld\"\n",result);
+	printf("Longitud de origen: \"%ld\"\n", result);
 
 	n = 10;
 	result = ft_strlcpy(dest, src, n);
 	printf("Origen: \"%s\"\n", src);
 	printf("Destino: \"%s\"\n", dest);
-	printf("Longitud de origen: \"%ld\"\n",result);
+	printf("Longitud de origen: \"%ld\"\n", result);
 
 	return (0);
-}
-*/
+} */

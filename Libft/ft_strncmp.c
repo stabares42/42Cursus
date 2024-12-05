@@ -1,32 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 17:55:12 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:43:15 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/04 11:49:54 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/05 13:45:12 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
+	size_t	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (i < n && str1[i] != '\0' && str2[i] != '\0')
+	{
+		if (str1[i] != str2[i])
+		{
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		}
+		i++;
+	}
 	return (0);
 }
 
 /* int	main(void)
 {
-	int	c;
+	char	s1[20];
+	char	s2[20];
+	int		n;
+	int		result;
 
-	c = 'A';
-	printf("%c Es alfabetico y retorna %d\n", c, ft_isalpha(c));
-
-	c = '1';
-	printf("%c No es alfabetico y retorna %d\n", c, ft_isalpha(c));
+	strcpy(s1, "Hola mundo");
+	strcpy(s2, "Hola world");
+	n = 7;
+	result = ft_strncmp(s1, s2, n);
+	printf("Resultado de ft_strncmp: %d\n", result);
 	return (0);
 } */

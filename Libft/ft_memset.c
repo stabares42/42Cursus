@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stabares <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 14:00:49 by stabares          #+#    #+#             */
-/*   Updated: 2024/11/27 14:00:51 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:17:22 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t n)
 {
@@ -26,8 +27,7 @@ void	*ft_memset(void *b, int c, size_t n)
 	return (b);
 }
 
-/* 
-int	main(void)
+/* int	main(void)
 {
 	char	buffer[20];
 	size_t	n;
