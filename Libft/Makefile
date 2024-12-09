@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 15:47:57 by stabares          #+#    #+#              #
-#    Updated: 2024/12/05 11:45:47 by stabares         ###   ########.fr        #
+#    Updated: 2024/12/09 12:48:35 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,4 +41,10 @@ SRC_CH = ft_toupper \
 			ft_tolower
 
 SRC = $(SRC_CHK) $(SRC_STR) $(SRC_MEM) $(SRC_CH)
+
+OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$
 			
