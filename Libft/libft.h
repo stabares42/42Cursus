@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:57:58 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/09 16:27:25 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/10 17:46:21 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ char		*ft_strrchr(const char *str, char c);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *s, char c);
 int			ft_strncmp(const char *str1, const char *str2, size_t n);
 
 // Memory manipulation functions
