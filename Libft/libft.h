@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:57:58 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/10 17:46:21 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:36:32 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void		*ft_calloc(size_t nmemb, size_t size);
 
 // Character manipulations functions
 int			ft_toupper(int c);
-int			ft_tolower(char c);
+int			ft_tolower(int c);
 int			ft_atoi(const char *str);
 
 #endif
