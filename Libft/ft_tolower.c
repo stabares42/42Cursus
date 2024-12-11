@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:15:11 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/10 18:37:58 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:59:33 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
 
 /* int	main(void)
 {
