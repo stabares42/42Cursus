@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/10 17:43:15 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/12 12:21:54 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/11 21:03:54 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/12 12:03:08 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static size_t	ft_count_words(char const *s, char c)
 {
+	int		in_word;
 	size_t	count;
-	size_t	in_word;
 
 	count = 0;
 	in_word = 0;
 	while (*s)
 	{
-		if (*s != c && !in_word)
+		if (*s != c && in_word == 0)
 		{
 			in_word = 1;
 			count++;
@@ -38,7 +38,7 @@ static char	*ft_get_word(char const *s, size_t start, size_t len)
 	char	*word;
 	size_t	index;
 
-	word = malloc((len + 1) * sizeof(char));
+	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
 	index = 0;
@@ -51,26 +51,27 @@ static char	*ft_get_word(char const *s, size_t start, size_t len)
 	return (word);
 }
 
-static char	*ft_next_word(char const *s, size_t *start, char c)
+static char	**ft_free_all(char **result, size_t i)
 {
-	while (s[*start] == c)
-		(*start)++;
-	return ((char *)(s + *start));
-}
-
-static void	ft_free_split(char **result)
-{
-	size_t	i;
-
-	if (!result)
-		return ;
-	i = 0;
-	while (result[i])
+	while (i > 0)
 	{
-		free(result[i]);
-		i++;
+		free(result[i - 1]);
+		i--;
 	}
 	free(result);
+	return (NULL);
+}
+
+static size_t	ft_find_next(char const *s, size_t *start, char c)
+{
+	size_t	end;
+
+	while (s[*start] && s[*start] == c)
+		(*start)++;
+	end = *start;
+	while (s[end] && s[end] != c)
+		end++;
+	return (end);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,7 +79,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	words;
 	size_t	start;
-	char	end;
+	size_t	end;
 	size_t	i;
 
 	if (!s)
@@ -91,10 +92,10 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (i < words)
 	{
-		end = ft_next_word(s, &start, c);
+		end = ft_find_next(s, &start, c);
 		result[i] = ft_get_word(s, start, end - start);
 		if (!result[i++])
-			return (ft_free_split(result));
+			return (ft_free_all(result, i - 1));
 		start = end;
 	}
 	result[i] = NULL;
