@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:34:42 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 14:54:55 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/16 23:20:40 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strrchr(const char *str, char c)
 	i = 0;
 	while (str[i] != '\0')
 		i++;
+	if (str[i] == c)
+		return ((char *)&str[i]);
 	while (i > 0)
 	{
-		if (str[i] == c)
-		{
-			return ((char *)&str[i]);
-		}
 		i--;
+		if (str[i] == c)
+			return ((char *)&str[i]);
 	}
 	return (NULL);
 }
