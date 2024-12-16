@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 17:43:15 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/12 12:21:54 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/13 13:25:05 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	ft_count_words(char const *s, char c)
 	in_word = 0;
 	while (*s)
 	{
-		if (*s != c && !in_word)
+		if (*s != c && in_word == 0)
 		{
 			in_word = 1;
 			count++;
@@ -33,29 +33,16 @@ static size_t	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-static char	*ft_get_word(char const *s, size_t start, size_t len)
+static size_t	ft_find_next_word(char const *s, size_t *start, char c)
 {
-	char	*word;
-	size_t	index;
+	size_t	end;
 
-	word = malloc((len + 1) * sizeof(char));
-	if (!word)
-		return (NULL);
-	index = 0;
-	while (index < len)
-	{
-		word[index] = s[start + index];
-		index++;
-	}
-	word[index] = '\0';
-	return (word);
-}
-
-static char	*ft_next_word(char const *s, size_t *start, char c)
-{
-	while (s[*start] == c)
+	while (s[*start] && s[*start] == c)
 		(*start)++;
-	return ((char *)(s + *start));
+	end = *start;
+	while (s[end] && s[end] != c)
+		end++;
+	return (end);
 }
 
 static void	ft_free_split(char **result)
@@ -78,29 +65,30 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	words;
 	size_t	start;
-	char	end;
+	size_t	end;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
 	words = ft_count_words(s, c);
-	result = (char **)malloc(sizeof(char *) * (words + 1));
+	result = malloc((words + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	start = 0;
 	i = 0;
 	while (i < words)
 	{
-		end = ft_next_word(s, &start, c);
-		result[i] = ft_get_word(s, start, end - start);
-		if (!result[i++])
-			return (ft_free_split(result));
+		end = ft_find_next_word(s, &start, c);
+		result[i] = ft_substr(s, start, end - start);
+		if (!result[i])
+			return (ft_free_split(result), NULL);
 		start = end;
+		i++;
 	}
 	result[i] = NULL;
 	return (result);
 }
-
+/* 
 int	main(void)
 {
 	char	**words;
@@ -126,4 +114,4 @@ int	main(void)
 	}
 	free(words);
 	return (0);
-}
+} */

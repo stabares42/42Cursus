@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 17:42:10 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:10:53 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/16 10:22:10 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/16 12:24:58 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	if (fd < 0)
+		return ;
+	write (fd, &c, 1);
 }
 
 /* int	main(void)
 {
-	char	c1;
+	char chr = 's';
 
-	c1 = 'a';
-	printf("Original: \"%c\"\nUppercase: \"%c\"\n", c1, ft_toupper(c1));
-	return (0);
-}
- */
+	ft_putchar_fd(chr, 1);
+} */

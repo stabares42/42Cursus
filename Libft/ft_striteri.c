@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 17:42:10 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:10:53 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/16 10:10:12 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/16 17:15:13 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
+	size_t	i;
 
-/* int	main(void)
-{
-	char	c1;
-
-	c1 = 'a';
-	printf("Original: \"%c\"\nUppercase: \"%c\"\n", c1, ft_toupper(c1));
-	return (0);
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
- */

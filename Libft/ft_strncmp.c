@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:49:54 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 13:45:12 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:05:32 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (i < n && str1[i] != '\0' && str2[i] != '\0')
+	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
 	{
 		if (str1[i] != str2[i])
 		{

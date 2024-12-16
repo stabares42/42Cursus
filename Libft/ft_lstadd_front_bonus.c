@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/02 17:42:10 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:10:53 by stabares         ###   ########.fr       */
+/*   Created: 2024/12/16 13:02:51 by stabares          #+#    #+#             */
+/*   Updated: 2024/12/16 14:27:17 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	if (!lst || !new)
+		return ;
+	new -> next = *lst;
+	*lst = new;
 }
 
 /* int	main(void)
 {
-	char	c1;
+	t_list	*node1;
+	t_list	*new_node;
+	char	*content1 = "Hola, mundo";
+	char	*new_content = "Nuevo nodo";
 
-	c1 = 'a';
-	printf("Original: \"%c\"\nUppercase: \"%c\"\n", c1, ft_toupper(c1));
+	node1 = ft_lstnew(content1);
+
+	new_node = ft_lstnew(new_content);
+
+	ft_lstadd_front(&node1, new_node);
+
+	printf("Contenido del primer nodo: %s\n", (char *)node1->content);
+
 	return (0);
-}
- */
+} */

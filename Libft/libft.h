@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:57:58 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/10 18:36:32 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:10:44 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 // Check functions
 int			ft_isalpha(int c);
@@ -44,7 +44,15 @@ char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
 char		**ft_split(char const *s, char c);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 int			ft_strncmp(const char *str1, const char *str2, size_t n);
+
+// Put functions
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 // Memory manipulation functions
 void		*ft_memset(void *b, int c, size_t n);
@@ -59,5 +67,12 @@ void		*ft_calloc(size_t nmemb, size_t size);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_atoi(const char *str);
+char		*ft_itoa(int n);
+
+// List functions
+void		ft_lstadd_front(t_list **lst, t_list *new);
+t_list		*ft_lstnew(void *content);
+t_list		*ft_lstlast(t_list *lst);
+int			ft_lstsize(t_list *lst);
 
 #endif

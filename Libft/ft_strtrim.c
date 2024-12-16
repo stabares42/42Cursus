@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:05:00 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/10 17:16:59 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/16 09:44:10 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	st[20];
 	char	*result;
 
-	strcpy(str1, "***Hola mundo++");
-	strcpy(st, "***++");
+	strcpy(str1, "***Ho*la mundo++");
+	strcpy(st, "*+");
 	result = ft_strtrim(str1, st);
 	printf("Primera cadena: \"%s\"\n", str1);
 	printf("Segunda cadena: \"%s\"\n", st);
