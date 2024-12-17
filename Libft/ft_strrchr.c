@@ -6,25 +6,21 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:34:42 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 23:20:40 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/17 19:17:42 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, char c)
+char	*ft_strrchr(const char *str, int c)
 {
 	size_t	i;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	if (str[i] == c)
-		return ((char *)&str[i]);
+	i = ft_strlen(str) + 1;
 	while (i > 0)
 	{
 		i--;
-		if (str[i] == c)
+		if (str[i] == (char)c)
 			return ((char *)&str[i]);
 	}
 	return (NULL);
@@ -35,8 +31,8 @@ char	*ft_strrchr(const char *str, char c)
 	char	str1[50];
 	char	*result;
 
-	strcpy(str1, "Hola, mundo");
-	result = ft_strrchr(str1, 'n');
+	strcpy(str1, "Hola");
+	result = ft_strrchr(str1, 'H');
 	if (result != NULL)
 	{
 		printf("Ultima aparición de 'n encontrada en la dirección: %p\n",result);
