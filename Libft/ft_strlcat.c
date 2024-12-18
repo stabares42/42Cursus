@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 13:00:24 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/09 15:20:19 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/17 22:37:03 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_len = 0;
 	while (dst_len < size && dst[dst_len])
 		dst_len++;
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	if (dst_len == size)
 		return (size + src_len);
 	i = 0;

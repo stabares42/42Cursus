@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 15:47:57 by stabares          #+#    #+#              #
-#    Updated: 2024/12/17 17:58:58 by stabares         ###   ########.fr        #
+#    Updated: 2024/12/17 23:26:10 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,10 +90,10 @@ bonus: $(BONUSOBJ)
 	$(CC) $(CCFlAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	@$(RM) $(OBJ) $(BONUSOBJ)
 
 fclean: clean
-	$(RM) $(NAME) $(BONUSOBJ)
+	@$(RM) $(NAME) $(BONUSOBJ)
 
 re: clean all
 
