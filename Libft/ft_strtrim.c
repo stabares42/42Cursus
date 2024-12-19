@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:05:00 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 09:44:10 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:41:53 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	printf("Segunda cadena: \"%s\"\n", st);
 	printf("Cadena esperada: \"%s\"\n", result);
 	return (0);
-} */
+}*/

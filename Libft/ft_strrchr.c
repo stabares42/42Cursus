@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:34:42 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 19:17:42 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:41:58 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,4 @@ char	*ft_strrchr(const char *str, int c)
 		printf("No se encontró el caracter 'z'.\n");
 	}
 	return (0);
-} */
+}*/

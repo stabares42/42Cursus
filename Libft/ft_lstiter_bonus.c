@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:42:41 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 19:20:12 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:40:45 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
+	t_list	*tem;
 
 	if (!f)
 		return ;
-	temp = lst;
-	while (temp)
+	tem = lst;
+	while (tem)
 	{
-		f(temp -> content);
-		temp = temp -> next;
+		f(tem -> content);
+		tem = tem -> next;
 	}
 }

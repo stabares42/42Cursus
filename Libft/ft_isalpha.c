@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:55:12 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:43:15 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:28 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ int	ft_isalpha(int c)
 	c = '1';
 	printf("%c No es alfabetico y retorna %d\n", c, ft_isalpha(c));
 	return (0);
-} */
+}*/

@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 11:49:54 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:05:32 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:42:07 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,4 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	result = ft_strncmp(s1, s2, n);
 	printf("Resultado de ft_strncmp: %d\n", result);
 	return (0);
-} */
+}*/

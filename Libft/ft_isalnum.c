@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:38:36 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:41:52 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:31 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ int	ft_isalnum(int c)
 	c = '@';
 	printf("%c No es alfanumerico y retorna %d\n", c, ft_isalnum(c));
 	return (0);
-}
- */
+}*/

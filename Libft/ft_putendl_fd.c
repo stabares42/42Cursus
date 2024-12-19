@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 10:35:57 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 12:38:11 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:26 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ void	ft_putendl_fd(char *s, int fd)
 	char	*str = "Hola mundo";
 
 	ft_putendl_fd(str, 1);
-} */
+}*/

@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:09:35 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 16:53:38 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:18 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ int	ft_isprint(int c)
 	c = 190;
 	printf("%c No es imprimible y retorna %d\n", c, ft_isprint(c));
 	return (0);
-} */
+}*/

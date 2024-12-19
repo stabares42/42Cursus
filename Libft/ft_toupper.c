@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 17:42:10 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:10:53 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:41:25 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int	ft_toupper(int c)
 	c1 = 'a';
 	printf("Original: \"%c\"\nUppercase: \"%c\"\n", c1, ft_toupper(c1));
 	return (0);
-}
- */
+}*/

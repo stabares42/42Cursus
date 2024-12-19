@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 15:25:41 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 15:28:43 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:38 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,4 @@ void	ft_bzero(void *b, size_t n)
 	ft_bzero(buffer, 10);
 	printf("Despues de bzero: \"%s\"\n", &buffer[10]);
 	return (0);
-} */
+}*/

@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 17:04:30 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 13:13:40 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:38 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	printf("Origen: \"%s\"\n", buffer_src);
 	printf("Destino: \"%s\"\n", buffer_dest);
 	return (0);
-}
- */
+}*/

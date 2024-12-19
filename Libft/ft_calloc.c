@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:31:53 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/09 17:53:36 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:34 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,4 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	printf("Despues de ft_calloc: \"%s\"\n", buffer);
 	free(buffer);
 	return (0);
-} */
+}*/

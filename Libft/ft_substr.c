@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:38:21 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:25:32 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:41:38 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_str = ft_substr(str, 5, 3);
 	printf("Resultado esperado \"mun\"\n");
 	printf("Resultado obtenido \"%s\"\n", sub_str);
-} */
+}*/

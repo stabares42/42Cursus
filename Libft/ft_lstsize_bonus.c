@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:16:19 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 12:53:33 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:54 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,4 @@ int	ft_lstsize(t_list *lst)
 
 	printf("Tamaño de la lista: %d\n", ft_lstsize(&node1));
 	return (0);
-} */
+}*/

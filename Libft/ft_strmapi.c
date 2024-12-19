@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 09:48:52 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:11:24 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:32:59 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+/* char	ft_transform(unsigned int i, char c)
+{
+	return (c + i);
+}
+
+int	main(void)
+{
+	char	*resultado;
+
+	resultado = ft_strmapi("abcd", ft_transform);
+	printf("Resultado: %s\n", resultado);
+	free(resultado);
+	return (0);
+} */

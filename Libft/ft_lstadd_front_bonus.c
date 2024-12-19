@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:02:51 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 14:27:17 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:43:13 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	printf("Contenido del primer nodo: %s\n", (char *)node1->content);
 
 	return (0);
-} */
+}*/

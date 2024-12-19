@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 18:08:01 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 13:39:28 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:34:04 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	printf("Longitud de origen: \"%ld\"\n", result);
 
 	return (0);
-} */
+}*/

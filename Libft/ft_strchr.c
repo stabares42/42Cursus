@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:29:13 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 16:59:05 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:36:22 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,4 @@ char	*ft_strchr(const char *str, int c)
 	else
 		printf("No se encontro 'm'.\n");
 	return (0);
-} */
+}*/

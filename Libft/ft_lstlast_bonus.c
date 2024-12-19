@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 12:54:42 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 19:18:53 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:40:37 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*tmp;
+	t_list	*temp;
 
 	if (!lst)
 		return (NULL);
-	tmp = lst;
-	while (tmp -> next)
-		tmp = tmp -> next;
-	return (tmp);
+	temp = lst;
+	while (temp -> next)
+		temp = temp -> next;
+	return (temp);
 }

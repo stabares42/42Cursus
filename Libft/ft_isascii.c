@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 19:47:11 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:44:18 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:22 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ int	ft_isascii(int c)
 	c = 169;
 	printf("%c No es un ASCII estandar y retorna %d\n", c, ft_isascii(c));
 	return (0);
-} */
+}*/

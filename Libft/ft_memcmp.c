@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:29:53 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 15:41:49 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:46 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,4 @@ int	ft_memcmp(void *ptr1, const void *ptr2, size_t n)
 	result = ft_memcmp(str1, str3, 5);
 	printf("Comparacion de str1 y str3: \"%d\"\n", result);
 	return (0);
-} */
+}*/

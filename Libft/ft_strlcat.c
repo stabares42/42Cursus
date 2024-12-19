@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 13:00:24 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 22:37:03 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:34:14 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	printf("Cadena concatenada: \"%s\"\n", dst);
 	printf("Longitud de cadena concatenada: \"%ld\"\n", result);
 	return (0);
-} */
+}*/

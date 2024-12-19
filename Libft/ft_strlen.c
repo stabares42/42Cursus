@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 20:16:32 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 18:33:39 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:33:06 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,4 @@ size_t	ft_strlen(const char *str)
 	printf("La longitud de \"%s\" es %zu\n", str3, ft_strlen(str3));
 	printf("La longitud de \"%s\" es %zu\n", str4, ft_strlen(str4));
 	return (0);
-} */
+}*/

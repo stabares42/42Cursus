@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 14:00:49 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 13:17:22 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:33 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,4 @@ void	*ft_memset(void *b, int c, size_t n)
 	// buffer[n] = '\0';
 	printf("Despues de ft_memset: \"%s\"\n", buffer);
 	return (0);
-} */
+}*/

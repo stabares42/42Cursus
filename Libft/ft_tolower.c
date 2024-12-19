@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:15:11 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/11 15:59:33 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:41:29 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ int	ft_tolower(int c)
 	c1 = 'A';
 	printf("Original: \"%c\"\nTolower: \"%c\"\n", c1, ft_tolower(c1));
 	return (0);
-} */
+}*/

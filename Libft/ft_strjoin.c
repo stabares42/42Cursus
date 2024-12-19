@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 16:59:52 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/10 13:03:18 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:34:18 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	printf("Cadena dos: \"%s\"\n", str2);
 	printf("Cadena nueva: \"%s\"\n", result);
 	return (0);
-} */
+}*/

@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 10:53:08 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 12:45:57 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:17 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,12 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write (fd, &c, 1);
 }
+
+/* int	main(void)
+{
+	ft_putnbr_fd(42, 1);
+	write(1, "\n", 1);
+	ft_putnbr_fd(-123, 1);
+	write(1, "\n", 1);
+	return (0);
+} */

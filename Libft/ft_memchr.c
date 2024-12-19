@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 14:27:58 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:47:24 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:38:50 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,4 @@ void	*ft_memchr(const void *str, int ch, size_t n)
 	else
 		printf("No se encontro el caracter \"%c\"\n", ch);
 	return (0);
-} */
+}*/

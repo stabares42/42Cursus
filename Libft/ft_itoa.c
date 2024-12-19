@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:26:43 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 16:49:17 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:15 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,4 @@ char	*ft_itoa(int n)
 	int	n = -344;
 
 	printf("Resultado: %s", ft_itoa(n));
-} */
+}*/

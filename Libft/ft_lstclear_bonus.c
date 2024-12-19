@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:04:04 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/17 19:30:37 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:43:08 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*temp;
+	t_list	*tem;
 
 	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
-		temp = (*lst)->next;
+		tem = (*lst)->next;
 		if ((*lst)->content)
 			del((*lst)->content);
 		free(*lst);
-		*lst = temp;
+		*lst = tem;
 	}
 	*lst = NULL;
 }

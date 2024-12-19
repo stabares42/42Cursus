@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 18:40:32 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 12:45:18 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:20 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ int	ft_isdigit(int c)
 	c = 'A';
 	printf("%c No es un digito y retorna %d\n", c, ft_isdigit(c));
 	return (0);
-} */
+}*/

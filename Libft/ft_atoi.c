@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 15:43:32 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/05 16:52:39 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:44:45 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,4 @@ int	ft_atoi(const char *str)
 	printf("Resultado 2: %d\n", ft_atoi(str2));
 	printf("Resultado 3: %d\n", ft_atoi(str3));
 	return (0);
-} */
+}*/

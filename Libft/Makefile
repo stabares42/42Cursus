@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 15:47:57 by stabares          #+#    #+#              #
-#    Updated: 2024/12/17 23:26:10 by stabares         ###   ########.fr        #
+#    Updated: 2024/12/19 13:40:53 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,8 +70,6 @@ SRC_BONUS = ft_lstadd_front_bonus.c	\
 			ft_lstlast_bonus.c	\
 			ft_lstmap_bonus.c	\
 			
-			
-
 SRC = $(SRC_IS) $(SRC_STR) $(SRC_PUT) $(SRC_MEM) $(SRC_TO)
 
 OBJ = $(SRC:.c=.o)

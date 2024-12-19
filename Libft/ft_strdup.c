@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 13:28:34 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/09 14:29:51 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:36:17 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,4 @@ char	*ft_strdup(const char *s)
 	printf("Destino: \"%s\"\n", d);
 	printf("puntero de destino: \"%p\"\n", d);
 	return (0);
-} */
+}*/

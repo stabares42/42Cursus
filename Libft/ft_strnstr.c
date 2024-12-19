@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:58:25 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/09 16:56:39 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 13:42:02 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,4 @@ char	*ft_strnstr(const char *big_str, const char *sub_str, size_t len)
 	else
 		printf("Palabra no encontrada.\n");
 	return (0);
-} */
+}*/

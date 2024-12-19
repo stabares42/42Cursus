@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 10:28:19 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/16 17:19:30 by stabares         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:36:30 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ void	ft_putstr_fd(char *s, int fd)
 
 	ft_putstr_fd(str, 1);
 	return (0);
-} */
+}*/
