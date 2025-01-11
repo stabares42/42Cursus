@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:49:59 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/10 21:58:50 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/11 15:36:27 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_putchar(char c)
 {
 	write (1, &c, 1);
-	return (0);
+	return (1);
 }

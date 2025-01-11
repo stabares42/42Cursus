@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 15:59:28 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/10 21:43:49 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/11 15:37:04 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_putstr(char *str)
 {
 	int	len;
 
+	if (!str)
+		str = "(null)";
 	len = 0;
 	while (str[len])
 	{
