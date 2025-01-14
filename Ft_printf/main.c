@@ -6,14 +6,13 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 19:26:13 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/11 15:39:13 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/14 14:05:37 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_printf.h" 
-# include <stdio.h>
-# include <stddef.h>
-
+#include "ft_printf.h" 
+#include <stdio.h>
+#include <stddef.h>
 
 int main(void)
 {
@@ -39,5 +38,7 @@ int main(void)
     ft_printf("Pointer test: %p\n", &str);
 	printf("Percent test original: %%\n");
 	ft_printf("Percent test: %%\n");
+	printf("Imprimio %i caracteres la funcion printf\n", printf("imprimiendo %i caracteres\n", 300));
+	ft_printf("Imprimio %i caracteres la funcion ft_printf\n", ft_printf("imprimiendo %i caracteres\n", 300));
 	return (0);
 }

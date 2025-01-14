@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:14:23 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/10 21:31:09 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/14 14:00:03 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 int			ft_printf(char const *format, ...);
 int			process_conversion(char specifier, va_list args);
-char		*ft_utoa(unsigned int n);
 char		*ft_itoa_base(unsigned long n, int base);
 int			print_integer(int n);
 int			print_unsigned(unsigned int n);

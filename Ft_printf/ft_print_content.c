@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/10 14:23:58 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/10 20:34:27 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/13 14:57:31 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	print_unsigned(unsigned int n)
 	char	*str;
 	int		len;
 
-	str = ft_utoa(n);
+	str = ft_itoa(n);
 	if (!str)
 		return (0);
 	len = ft_putstr(str);
