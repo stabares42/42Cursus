@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 15:47:57 by stabares          #+#    #+#              #
-#    Updated: 2025/01/10 21:50:04 by stabares         ###   ########.fr        #
+#    Updated: 2025/01/21 13:42:40 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,7 @@ SRC_STR = ft_strlen.c		\
 SRC_PUT = ft_putchar_fd.c	\
 			ft_putendl_fd.c	\
 			ft_putnbr_fd.c	\
-			ft_putstr_fd.c	\
-			ft_putstr.c		\
-			ft_putchar.c
+			ft_putstr_fd.c
 
 SRC_MEM = ft_memset.c		\
 			ft_bzero.c		\

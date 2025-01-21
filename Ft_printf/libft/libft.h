@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:57:58 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/10 21:58:21 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/21 13:42:32 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putnbr_fd(int n, int fd);
-int			ft_putchar(char c);
-int			ft_putstr(char *str);
 
 // Memory manipulation functions.
 void		*ft_memset(void *b, int c, size_t n);

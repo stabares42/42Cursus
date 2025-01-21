@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 21:17:08 by stabares          #+#    #+#              #
-#    Updated: 2025/01/13 15:17:40 by stabares         ###   ########.fr        #
+#    Updated: 2025/01/21 13:41:10 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = gcc
 FLAG = -Wall -Werror -Wextra
 
 # ·Archivos fuente y objetos
-SRC = ft_printf.c ft_print_content.c
+SRC = ft_printf.c ft_print_content.c ft_utils.c
 OBJ = $(SRC:.c=.o)
 
 # ·Nombre de la biblioteca
