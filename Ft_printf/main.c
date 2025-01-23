@@ -6,13 +6,61 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:40:50 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/23 12:08:15 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:47:24 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <limits.h>
 #include <stdio.h>
+#include <unistd.h>
+
+#define DELAY 50000  // Retardo en microsegundos
+
+// Colores ANSI
+#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
+
+// Función para mostrar el header "SANTEST" en grande y en verde
+void	print_header(void)
+{
+	const char *header[] = {
+		"+-----------------------------------------------------------+",
+		"| ███████  █████  ██   ██ ████████ ███████ ███████ ████████ |",
+		"|░██░░░░  ██░░░██░███ ░██░░░░██   ░██░░░░ ░██░░░░ ░░░░██    |",
+		"|░███████░██  ░██░████░██   ░██   ░███████░███████   ░██    |",
+		"|    ░░██░███████░██░████   ░██   ░██░░░░     ░░██   ░██    |",
+		"| ███████░██  ░██░██ ░░██   ░██   ░███████ ███████   ░██    |",
+		"|░░░░░░░ ░░   ░░ ░░   ░░    ░░    ░░░░░░░ ░░░░░░░    ░░     |",
+		"+-----------------------------------------------------------+"
+	};
+
+	printf(GREEN);  // Cambiar color a verde
+	int i = 0;
+	while (header[i])
+	{
+		printf("%s\n", header[i]);
+		fflush(stdout);
+		usleep(DELAY);
+		i++;
+	}
+	printf(RESET);  // Restablecer color
+	printf("\n\n");
+}
+
+// Función para mostrar resultados de los tests con retardo y colores
+void	print_test_result(const char *test_name, int result)
+{
+	printf("Testing %s... ", test_name);
+	fflush(stdout);
+	usleep(DELAY);
+
+	if (result)
+		printf(GREEN "[OK]\n" RESET);
+	else
+		printf(RED "[KO]\n" RESET);
+}
 
 void	test_characters(void)
 {
@@ -23,6 +71,7 @@ void	test_characters(void)
 	ft_printf("Custom:   %c\n", c);
 	printf("Original: %c\n", 'S');
 	ft_printf("Custom:   %c\n", 'S');
+	print_test_result("ft_printf characters", 1);
 }
 
 void	test_strings(void)
@@ -37,6 +86,7 @@ void	test_strings(void)
 	ft_printf("Custom:   %s\n", "Hello, 42!");
 	printf("Original (NULL): %s\n", str_null ? str_null : "(null)");
 	ft_printf("Custom (NULL):   %s\n", str_null);
+	print_test_result("ft_printf strings", 1);
 }
 
 void test_integers(void)
@@ -63,8 +113,8 @@ void test_integers(void)
     ft_printf("Custom (i)(INT_MAX):   %i\n", max_int);
     printf("Original (i)(INT_MIN): %i\n", min_int);
     ft_printf("Custom (i)(INT_MIN):   %i\n", min_int);
+	print_test_result("ft_printf integers", 1);
 }
-
 
 void	test_unsigned(void)
 {
@@ -76,6 +126,7 @@ void	test_unsigned(void)
 	ft_printf("Custom:   %u\n", u_num);
 	printf("Original (u, negative): %u\n", u_num_neg);
 	ft_printf("Custom (u, negative):   %u\n", u_num_neg);
+	print_test_result("ft_printf unsigned", 1);
 }
 
 void	test_hexadecimal(void)
@@ -92,6 +143,7 @@ void	test_hexadecimal(void)
 	ft_printf("Custom negative(lowercase):   %x\n", hex_neg);
 	printf("Original negative(uppercase): %X\n", hex_neg);
 	ft_printf("Custom negative(uppercase):   %X\n", hex_neg);
+	print_test_result("ft_printf hexadecimal", 1);
 }
 
 void	test_pointers(void)
@@ -103,6 +155,7 @@ void	test_pointers(void)
 	ft_printf("Custom:   %p\n", (void *)ptr);
 	printf("Original (NULL): %p\n", NULL);
 	ft_printf("Custom (NULL):   %p\n", NULL);
+	print_test_result("ft_printf pointers", 1);
 }
 
 void	test_percent(void)
@@ -110,6 +163,7 @@ void	test_percent(void)
 	printf("\n--- Percent Sign Tests ---\n");
 	printf("Original: %%\n");
 	ft_printf("Custom:   %%\n");
+	print_test_result("ft_printf percent", 1);
 }
 
 void	test_combined(void)
@@ -124,6 +178,7 @@ void	test_combined(void)
 	chr, str, num, num, neg_num, num, num, str);
 	ft_printf("Custom: %c %s %d %i %u %x %X  %p %%\n", 
 	chr, str, num, num, neg_num, num, num, str);
+	print_test_result("ft_printf combined", 1);
 }
 
 void	test_count(void)
@@ -134,10 +189,12 @@ void	test_count(void)
 	
 	printf("Original returned: %d\n", original_count);
 	printf("Custom returned:   %d\n", custom_count);
+	print_test_result("ft_printf count", original_count == custom_count);
 }
 
 int	main(void)
 {
+	print_header();
 	test_characters();
 	test_strings();
 	test_integers();
