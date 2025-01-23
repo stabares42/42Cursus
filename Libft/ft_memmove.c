@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 17:04:30 by stabares          #+#    #+#             */
-/*   Updated: 2024/12/19 14:38:38 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/23 15:36:50 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		buffer_dest[i] = 0;
 		i++;
 	}
-	printf("Antes de memmove.\n");
+		printf("Custom.\n");
+	printf("Antes de ft_memmove.\n");
 	printf("Origen: \"%s\"\n", buffer_src);
 	printf("Destino: \"%s\"\n", buffer_dest);
 	ft_memmove(buffer_dest, buffer_src, 5);
-	printf("Antes de memmove.\n");
+	printf("Despues de ft_memmove.\n");
+	printf("Origen: \"%s\"\n", buffer_src);
+	printf("Destino: \"%s\"\n\n", buffer_dest);
+
+	buffer_dest[0] = 0;
+	
+		printf("Original.\n");
+		printf("Antes de memmove.\n");
+	printf("Origen: \"%s\"\n", buffer_src);
+	printf("Destino: \"%s\"\n", buffer_dest);
+	memmove(buffer_dest, buffer_src, 5);
+	printf("Despues de memmove.\n");
 	printf("Origen: \"%s\"\n", buffer_src);
 	printf("Destino: \"%s\"\n", buffer_dest);
 	return (0);
-}*/
+} */
