@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 14:40:50 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/21 15:03:13 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/23 12:08:15 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,15 @@ void	test_characters(void)
 void	test_strings(void)
 {
 	char *str = "Hello, 42!";
+	char *str_null = NULL;
 	
 	printf("\n--- String Tests ---\n");
 	printf("Original: %s\n", str);
 	ft_printf("Custom:   %s\n", str);
 	printf("Original: %s\n", "Hello, 42!");
 	ft_printf("Custom:   %s\n", "Hello, 42!");
-	printf("Original (NULL): %s\n", (NULL ? "(null)" : "(null)"));
-	ft_printf("Custom (NULL):   %s\n", NULL);
+	printf("Original (NULL): %s\n", str_null ? str_null : "(null)");
+	ft_printf("Custom (NULL):   %s\n", str_null);
 }
 
 void test_integers(void)
