@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/24 15:35:49 by stabares          #+#    #+#             */
+/*   Updated: 2025/01/24 15:35:50 by stabares         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
@@ -13,7 +25,6 @@
 #define RED "\033[1;31m"
 #define RESET "\033[0m"
 
-// Función para mostrar el header "SANTEST" en grande y en verde
 void	print_header(void)
 {
 	const char *header[] = {
@@ -24,12 +35,13 @@ void	print_header(void)
 		"|    ░░██░███████░██░████   ░██   ░██░░░░     ░░██   ░██    |",
 		"| ███████░██  ░██░██ ░░██   ░██   ░███████ ███████   ░██    |",
 		"|░░░░░░░ ░░   ░░ ░░   ░░    ░░    ░░░░░░░ ░░░░░░░    ░░     |",
-		"+-----------------------------------------------------------+"
+		"+-----------------------------------------------------------+",
+		NULL  // <--- Terminador nulo
 	};
 
 	printf(GREEN);  // Cambiar color a verde
 	int i = 0;
-	while (header[i])
+	while (header[i])  // Ahora el bucle se detendrá correctamente
 	{
 		printf("%s\n", header[i]);
 		fflush(stdout);
@@ -122,12 +134,14 @@ void	run_tests(void)
 	printf("Custom:   %s\n", dest);
 	print_test_result("ft_memcpy", strcmp(dest, "Hello") == 0);
 
+	// ft_memmove
 	strcpy(dest, "OverlapTest");
-ft_memmove(dest + 3, dest, 6);
-printf("\n--- ft_memmove ---\n");
-printf("Original: %s\n", "OveOverlapTest");
-printf("Custom:   %s\n", dest);
-print_test_result("ft_memmove", strcmp(dest, "OveOverlapTest") == 0);
+	ft_memmove(dest + 3, dest, 6);
+	printf("\n--- ft_memmove ---\n");
+	printf("Original: %s\n", "OveOverlapTest");
+	printf("Custom:   %s\n", dest);
+	print_test_result("ft_memmove", strcmp(dest, "OveOverlapTest") == 0);
+	
 	// ft_atoi
 	str = "42";
 	printf("\n--- ft_atoi ---\n");
