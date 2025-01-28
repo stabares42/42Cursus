@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 18:02:55 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/24 17:27:50 by stabares         ###   ########.fr       */
+/*   Created: 2025/01/28 15:32:43 by stabares          #+#    #+#             */
+/*   Updated: 2025/01/28 16:03:21 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,15 @@
 # define BUFFER_SIZE 42
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
-# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
 
+size_t	ft_strlen(const char *str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strjoin(char *str1, char *str2);
 #endif
