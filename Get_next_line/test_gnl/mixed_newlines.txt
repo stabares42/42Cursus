@@ -1,0 +1,4 @@
+Línea 1\n
+Línea 2\r\n
+Línea 3\n
+Línea 4\r\n

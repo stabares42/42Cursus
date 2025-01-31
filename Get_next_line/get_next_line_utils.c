@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:32:36 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/30 16:59:44 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/31 16:16:36 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,28 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)&str[i]);
 	return (NULL);
 }
-
-/* void	ft_strcpy(char *dest, const char *src)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
+	char	*sub;
 	size_t	i;
-
+	
+	if (!str)
+		return (NULL);
+	if (start >= ft_strlen(str))
+		return (ft_strdup(""));
+	if (len > ft_strlen(str + start))
+		len = ft_strlen(str + start);
+	sub = ft_calloc(len + 1, sizeof(char));
+	if (!sub)
+		return (NULL);
 	i = 0;
-	while (src[i] != '\0' && src[i] != '\n')
+	while (i < len)
 	{
-		dest[i] = src[i];
+		sub[i] = str[start + i];
 		i++;
 	}
-} */
-
+	return (sub);
+}
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
@@ -91,7 +100,6 @@ char	*ft_strjoin(char *str1, char *str2)
 	{
 		while (*str1)
 			result[i++] = *str1++;
-		free(str1 - len_str1);
 	}
 	while (*str2)
 		result[i++] = *str2++;

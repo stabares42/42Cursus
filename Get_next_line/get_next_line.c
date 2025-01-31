@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 15:32:29 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/30 17:52:05 by stabares         ###   ########.fr       */
+/*   Updated: 2025/01/31 16:09:52 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int	read_to_buffer(int fd, char **buffer)
 {
 	char	*temp_buffer;
+	char	*temp;
 	ssize_t	bytes_read;
 
 	temp_buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
@@ -26,8 +27,11 @@ static int	read_to_buffer(int fd, char **buffer)
 		free(temp_buffer);
 		return (bytes_read == 0);
 	}
-	*buffer = ft_strjoin(*buffer, temp_buffer);
+	temp_buffer[bytes_read] = '\0';
+	temp = ft_strjoin(*buffer, temp_buffer);
 	free(temp_buffer);
+	free(temp);
+	*buffer = temp;
 	return (1);
 }
 static char	*extrac_line(char **buffer)
@@ -36,6 +40,8 @@ static char	*extrac_line(char **buffer)
 	char	*newline_pos;
 	size_t	line_len;
 
+	if (!*buffer || !**buffer)
+		return (NULL);
 	newline_pos = ft_strchr(*buffer, '\n');
 	if (!newline_pos)
 	{
@@ -46,25 +52,31 @@ static char	*extrac_line(char **buffer)
 	}
 	line_len = newline_pos - *buffer + 1;
 	line = ft_substr(*buffer, 0, line_len);
+	newline_pos = ft_strdup(newline_pos + 1);
+	free(*buffer);
+	*buffer = newline_pos;
 	return (line);
 }
-static void	update_buffer(char **buffer)
+char	*ft_strdup(const char *str)
 {
-	char	*newline_pos;
-	char	*new_buffer;
+	char	*dup;
+	size_t	len;
+	size_t	i;
 
-	newline_pos = ft_strchr(*buffer, '\n');
-	if (!newline_pos)
+	if (!str)
+		return (NULL);
+	len = ft_strlen(str);
+	dup = ft_calloc(len + 1, sizeof(char));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (str[i])
 	{
-		free(*buffer);
-		*buffer = NULL;
-		return ;
+		dup[i] = str[i];
+		i++;
 	}
-	new_buffer = ft_strdup(newline_pos + 1);
-	free(*buffer);
-	*buffer = new_buffer;
+	return (dup);
 }
-
 char	*get_next_line(int fd)
 {
 	static char	*buffer;
@@ -73,10 +85,9 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	if (!buffer)
-		buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	if (read_to_buffer(fd, &buffer))
+		buffer = ft_calloc(1, sizeof(char));
+	if (!read_to_buffer(fd, &buffer))
 		return (NULL);
-	line = extract_line(&buffer);
-	update_buffer(&buffer);
-	return (NULL);
+	line = extrac_line(&buffer);
+	return (line);
 }
