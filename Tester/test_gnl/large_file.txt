@@ -1,0 +1,1 @@
+base64 /dev/urandom | head -c 10M > large_file.txt
