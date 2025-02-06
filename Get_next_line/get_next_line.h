@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 13:50:10 by stabares          #+#    #+#             */
-/*   Updated: 2025/02/06 15:27:40 by stabares         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:44:29 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 
 # include <stdlib.h>
 # include <unistd.h>
- 
+
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strjoin(char *str1, char *str2);
-char 	*ft_substr(const char *str, unsigned int start, size_t len);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 char	*get_next_line(int fd);
