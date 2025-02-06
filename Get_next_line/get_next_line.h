@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 13:50:10 by stabares          #+#    #+#             */
-/*   Updated: 2025/02/06 15:44:29 by stabares         ###   ########.fr       */
+/*   Created: 2025/02/06 17:41:39 by stabares          #+#    #+#             */
+/*   Updated: 2025/02/06 17:41:51 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
-
-# include <stdlib.h>
-# include <unistd.h>
 
 # include <stdlib.h>
 # include <unistd.h>

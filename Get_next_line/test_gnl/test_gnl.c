@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/31 14:47:37 by stabares          #+#    #+#             */
-/*   Updated: 2025/02/04 16:26:47 by stabares         ###   ########.fr       */
+/*   Updated: 2025/02/06 17:42:47 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,6 @@ void	test_error_handling()
 	else
 	{
 		printf("✖ Error: Se esperaba NULL para un descriptor de archivo inválido\n");
-		free(line);
-	}
-		printf("Prueba 7.2: Buffer nulo\n");
-	line = get_next_line(0);
-	if (line == NULL)
-		printf("✔ Manejo de buffer nulo correcto\n");
-	else
-	{
-		printf("✖ Error: Se esperaba NULL para un buffer nulo\n");
 		free(line);
 	}
 }
