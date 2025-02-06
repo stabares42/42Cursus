@@ -38,7 +38,7 @@ void	run_test(const char *filename)
 }
 
 /* Función para probar el manejo de errores */
-void	test_error_handling(void)
+void	test_error_handling()
 {
 	char *line;
 
@@ -50,6 +50,15 @@ void	test_error_handling(void)
 	else
 	{
 		printf("✖ Error: Se esperaba NULL para un descriptor de archivo inválido\n");
+		free(line);
+	}
+		printf("Prueba 7.2: Buffer nulo\n");
+	line = get_next_line(0);
+	if (line == NULL)
+		printf("✔ Manejo de buffer nulo correcto\n");
+	else
+	{
+		printf("✖ Error: Se esperaba NULL para un buffer nulo\n");
 		free(line);
 	}
 }
