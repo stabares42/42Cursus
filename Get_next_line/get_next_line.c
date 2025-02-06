@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 13:47:47 by stabares          #+#    #+#             */
-/*   Updated: 2025/02/05 16:09:29 by stabares         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:29:27 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,48 +15,51 @@
 static char	*read_line(int fd, char *buffer)
 {
 	char	*temp_buffer;
-	ssize_t	byte_read;
+	ssize_t	bytes_read;
 
-	temp_buffer = calloc(BUFFER_SIZE + 1, sizeof(char));
+	temp_buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!temp_buffer)
 		return (NULL);
-	byte_read = 1;
-	while (byte_read > 0)
+	bytes_read = 1;
+	while (bytes_read > 0)
 	{
-		byte_read = read(fd, temp_buffer, BUFFER_SIZE);
-		if (byte_read == -1)
+		bytes_read = read(fd, temp_buffer, BUFFER_SIZE);
+		if (bytes_read == -1)
 		{
 			free(temp_buffer);
 			return (NULL);
 		}
+		temp_buffer[bytes_read] = '\0';
 		buffer = ft_strjoin(buffer, temp_buffer);
 		if (ft_strchr(buffer, '\n'))
-			break;
-		if (byte_read = 0)
-			break;
+			break ;
+		if (bytes_read == 0)
+			break ;
 	}
 	free(temp_buffer);
 	return (buffer);
 }
+
 static char	*extract_line(char *buffer)
 {
 	char	*line;
 	int		i;
 
-	if (!buffer)
-		return (NULL);
 	i = 0;
+	if (!buffer[i])
+		return (NULL);
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
 	line = ft_substr(buffer, 0, i + 1);
 	return (line);
 }
-static char *update_buffer(char *buffer)
+
+static char	*update_buffer(char *buffer)
 {
 	char	*new_buffer;
 	int		i;
 	int		j;
-	
+
 	i = 0;
 	while (buffer[i] && buffer[i] != '\n')
 		i++;
@@ -65,9 +68,7 @@ static char *update_buffer(char *buffer)
 		free(buffer);
 		return (NULL);
 	}
-	new_buffer = ft_calloc(ft_strlen(buffer) - i, sizeof(char));
-	if (!new_buffer)
-		return (NULL); 
+	new_buffer = ft_calloc((ft_strlen(buffer) - i + 1), sizeof(char));
 	i++;
 	j = 0;
 	while (buffer[i])
