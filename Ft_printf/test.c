@@ -85,7 +85,7 @@ void	test_strings(void)
 	ft_printf("Custom:   %s\n", str);
 	printf("Original: %s\n", "Hello, 42!");
 	ft_printf("Custom:   %s\n", "Hello, 42!");
-	printf("Original (NULL): %s\n", str_null ? str_null : "(null)");
+	printf("Original (NULL): %s\n", str_null);
 	ft_printf("Custom (NULL):   %s\n", str_null);
 	print_test_result("ft_printf strings", 1);
 }
