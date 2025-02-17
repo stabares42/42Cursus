@@ -1,0 +1,3 @@
+Línea corta
+Esta es una línea un poco más larga
+Esta línea es mucho más larga que las anteriores y debería ser manejada correctamente por get_next_line.

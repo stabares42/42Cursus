@@ -1,2 +1,1 @@
-Esta es una línea muy larga que supera el tamaño del buffer para probar que get_next_line funciona correctamente.
-Otra línea larga para asegurarnos de que el manejo de buffers grandes es correcto.
+Esta es una línea muy larga que debería ser manejada correctamente por get_next_line.
