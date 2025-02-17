@@ -6,7 +6,7 @@
 /*   By: stabares <stabares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:14:23 by stabares          #+#    #+#             */
-/*   Updated: 2025/01/21 13:43:30 by stabares         ###   ########.fr       */
+/*   Updated: 2025/02/13 15:29:31 by stabares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft/libft.h"
 
 int			ft_printf(char const *format, ...);
 int			ft_printn(unsigned int n);

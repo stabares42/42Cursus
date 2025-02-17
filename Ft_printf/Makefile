@@ -6,7 +6,7 @@
 #    By: stabares <stabares@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/07 21:17:08 by stabares          #+#    #+#              #
-#    Updated: 2025/01/21 13:41:10 by stabares         ###   ########.fr        #
+#    Updated: 2025/02/13 15:29:16 by stabares         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,26 +21,15 @@ OBJ = $(SRC:.c=.o)
 # ·Nombre de la biblioteca
 NAME = libftprintf.a
 
-# ·Librería libft
-LIBFT_DIR = libft
-LIBFT = $(LIBFT_DIR)/libft.a
-
 # ·Incluir el archivo de cabecera
 INCLUDE = ft_printf.h
 
-# ·Archivos de objetos de la librería libft
-LIBFT_OBJECTS = $(LIBFT_DIR)/*.o
-
-# Regla principal: compila la librería libft y luego ft_printf
+# Regla principal: compila la librería ft_printf
 all: $(NAME)
 
-# Compilación de la librería libft
-$(LIBFT):
-	$(MAKE) -C $(LIBFT_DIR)
-
 # Regla para crear la biblioteca $(NAME) con los objetos $(OBJ)
-$(NAME): $(OBJ) $(LIBFT)
-	ar rcs $(NAME) $(OBJ) $(LIBFT_OBJECTS)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 # Regla para compilar los archivos fuente .c en objetos .o
 %.o: %.c $(INCLUDE)
@@ -48,14 +37,13 @@ $(NAME): $(OBJ) $(LIBFT)
 
 # Limpiar archivos objeto
 clean:
-	rm -f $(OBJ)
-	$(MAKE) -C $(LIBFT_DIR) clean
+	@rm -f $(OBJ)
 
 # Limpieza completa
 fclean: clean
-	rm -f $(NAME)
-	rm -f $(LIBFT)
-	$(MAKE) -C $(LIBFT_DIR) fclean
+	@rm -f $(NAME)
 
 # Reconstruir todo
 re: fclean all
+
+.PHONY: all clean fclean re
